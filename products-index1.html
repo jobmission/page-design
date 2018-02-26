@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/4.1.6/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <style>
+
+        .search-container {
+            z-index: 2;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+
+        .menu-container {
+            margin-top: 52px;
+        }
+
+        .page-container {
+            /*margin-top: 91px;*/
+            min-height: 360px;
+            max-height: 450px;
+            overflow: auto;
+        }
+
+        .swiper-wrapper {
+            text-align: center;
+        }
+
+        .swiper-slide {
+            cursor: pointer;
+            line-height: 36px;
+            width: auto;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .swiper-slide:first-child {
+            margin-left: 0px;
+        }
+
+        .swiper-slide:last-child {
+            margin-right: 0px;
+        }
+
+        div.active {
+            color: green;
+
+        }
+
+        div.active:after {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #6cca28;
+            content: " ";
+            bottom: 0;
+            left: 0;
+        }
+
+        .swiper-wrapper:after, .swiper-container:after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        ul.menu-left {
+            list-style: none;
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+
+        ul.menu-left li {
+            padding-top: 13px;
+            padding-bottom: 13px;
+            cursor: pointer;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        ul.menu-left li.active {
+            background-color: #ffffff;
+        }
+
+        .productDesc {
+            overflow: hidden; /*自动隐藏文字*/
+            text-overflow: ellipsis; /*文字隐藏后添加省略号*/
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<div class="search-container container">
+    <input/>
+    <button>Search</button>
+</div>
+<div class="menu-container container">
+    <!-- Slider main container -->
+    <div class="swiper-container swiper-container-horizontal">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" data-id="1" data-name="电脑">电脑</div>
+            <div class="swiper-slide" data-id="2" data-name="平板">平板</div>
+            <div class="swiper-slide" data-id="3" data-name="手机">手机</div>
+            <div class="swiper-slide" data-id="4" data-name="网卡">网卡</div>
+            <div class="swiper-slide" data-id="5" data-name="U盘">U盘</div>
+            <div class="swiper-slide" data-id="6" data-name="硬盘">硬盘</div>
+            <div class="swiper-slide" data-id="7" data-name="内存">内存</div>
+            <div class="swiper-slide" data-id="8" data-name="主板">主板</div>
+            <div class="swiper-slide" data-id="9" data-name="路由器">路由器</div>
+            <div class="swiper-slide" data-id="10" data-name="游戏机">游戏机</div>
+            <div class="swiper-slide" data-id="11" data-name="投影仪">投影仪</div>
+            <div class="swiper-slide" data-id="12" data-name="摄像头">摄像头</div>
+            <div class="swiper-slide" data-id="13" data-name="键鼠">键鼠</div>
+        </div>
+    </div>
+</div>
+
+<div class="page-container container">
+    <div class="row">
+        <div class="col-xs-4">
+            <ul class="menu-left">
+                <li>华为</li>
+                <li class="active">小米</li>
+                <li>魅族</li>
+                <li>三星</li>
+                <li>苹果</li>
+            </ul>
+        </div>
+        <div class="col-xs-8" style="margin-top: 15px;padding-left: 0px;">
+            <div class="row">
+                <div class="col-xs-5" style="padding-right: 0px;">
+                    <img src="http://placehold.it/300&text=placehold" class="img-responsive" alt="Responsive image">
+                </div>
+                <div class="col-xs-7">
+                    <span>
+                        小米6
+                    </span>
+                    <p class="productDesc" style="margin: 0px;">
+                        小米 6 变焦双摄，拍人更美 骁龙835 旗舰处理器， 最高可选 6GB 大内存 |  5.15" 护眼屏 | 四曲面陶瓷 / 玻璃
+                    </p>
+                    <span class="badge">全网通版 4GB</span>
+                    <span class="text-danger">2299元</span>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 15px;">
+                <div class="col-xs-5" style="padding-right: 0px;">
+                    <img src="http://placehold.it/300&text=placehold" class="img-responsive" alt="Responsive image">
+                </div>
+                <div class="col-xs-7">
+                    <span>
+                        小米6
+                    </span>
+                    <p class="productDesc" style="margin: 0px;">
+                        小米 6 变焦双摄，拍人更美 骁龙835 旗舰处理器， 最高可选 6GB 大内存 |  5.15" 护眼屏 | 四曲面陶瓷 / 玻璃
+                    </p>
+                    <span class="badge">全网通版 4GB</span>
+                    <span class="text-danger">2299元</span>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 15px;">
+                <div class="col-xs-5" style="padding-right: 0px;">
+                    <img src="http://placehold.it/300&text=placehold" class="img-responsive" alt="Responsive image">
+                </div>
+                <div class="col-xs-7">
+                    <span>
+                        小米6
+                    </span>
+                    <p class="productDesc" style="margin: 0px;">
+                        小米 6 变焦双摄，拍人更美 骁龙835 旗舰处理器， 最高可选 6GB 大内存 |  5.15" 护眼屏 | 四曲面陶瓷 / 玻璃
+                    </p>
+                    <span class="badge">全网通版 4GB</span>
+                    <span class="text-danger">2299元</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.1.6/js/swiper.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            slidesPerView: 'auto',
+            freeMode: false,
+            on: {
+                tap: function (event) {
+                    console.log('tap event');
+                    if (mySwiper.clickedSlide != null) {
+                        console.log('你tap了Swiper', mySwiper.clickedSlide.getAttribute("data-name"));
+                    } else {
+                        console.log('你tap了Swiper,but mySwiper.clickedSlide is null!');
+                    }
+                },
+
+            }
+
+        });
+
+
+        $(".swiper-slide").click(function () {
+            console.log('click event');
+            $(".swiper-slide").removeClass("active");
+            $(this).addClass("active");
+            if (mySwiper.clickedSlide != null) {
+                console.log('data', mySwiper.clickedSlide.dataset.name);
+            } else {
+                console.log('你click了Swiper,but mySwiper.clickedSlide is null!');
+            }
+
+        })
+
+    });
+</script>
+</body>
+</html>
