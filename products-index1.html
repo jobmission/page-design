@@ -80,7 +80,7 @@
             background-color: #ffffff;
         }
 
-        .productDesc {
+        .product-desc {
             overflow: hidden; /*自动隐藏文字*/
             text-overflow: ellipsis; /*文字隐藏后添加省略号*/
             white-space: nowrap;
@@ -132,8 +132,8 @@
                 <li class="pl-3">苹果</li>
             </ul>
         </div>
-        <div class="col-8 col-sm-10 mt-2 pl-0">
-            <div class="row mb-2">
+        <div class="col-8 col-sm-10 mt-2 pl-0 product-container">
+            <div class="row mb-2 product-item">
                 <div class="col-5 pr-0  pl-2">
                     <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
                 </div>
@@ -141,7 +141,7 @@
                     <h5 class="mb-0">
                         小米6
                     </h5>
-                    <p class="productDesc m-0">
+                    <p class="product-desc m-0">
                         小米 6 变焦双摄，拍人更美 骁龙835 旗舰处理器， 最高可选 6GB 大内存 |  5.15" 护眼屏 | 四曲面陶瓷 / 玻璃
                     </p>
                     <span class="badge badge-pill badge-secondary">全网通版 4GB</span>
@@ -168,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-2">
+            <div class="row mb-2 product-item">
                 <div class="col-5 pr-0 pl-2">
                     <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
                 </div>
@@ -176,14 +176,14 @@
                     <h5 class="mb-0">
                         小米6
                     </h5>
-                    <p class="productDesc m-0">
+                    <p class="product-desc m-0">
                         小米 6 变焦双摄，拍人更美 骁龙835 旗舰处理器， 最高可选 6GB 大内存 |  5.15" 护眼屏 | 四曲面陶瓷 / 玻璃
                     </p>
                     <span class="badge badge-pill badge-secondary">全网通版 4GB</span>
                     <span class="text-danger text-nowrap">2299元</span>
                 </div>
             </div>
-            <div class="row mb-2">
+            <div class="row mb-2 product-item">
                 <div class="col-5 pr-0 pl-2">
                     <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
                 </div>
@@ -191,14 +191,14 @@
                     <h5 class="mb-0">
                         小米6
                     </h5>
-                    <p class="productDesc m-0">
+                    <p class="product-desc m-0">
                         小米 6 变焦双摄，拍人更美 骁龙835 旗舰处理器， 最高可选 6GB 大内存 |  5.15" 护眼屏 | 四曲面陶瓷 / 玻璃
                     </p>
                     <span class="badge badge-pill badge-secondary">全网通版 4GB</span>
                     <span class="text-danger text-nowrap">2299元</span>
                 </div>
             </div>
-            <div class="row mb-2">
+            <div class="row mb-2 product-item">
                 <div class="col-5 pr-0 pl-2">
                     <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
                 </div>
@@ -206,14 +206,14 @@
                     <h5 class="mb-0">
                         小米6
                     </h5>
-                    <p class="productDesc m-0">
+                    <p class="product-desc m-0">
                         小米 6 变焦双摄，拍人更美 骁龙835 旗舰处理器， 最高可选 6GB 大内存 |  5.15" 护眼屏 | 四曲面陶瓷 / 玻璃
                     </p>
                     <span class="badge badge-pill badge-secondary">全网通版 4GB</span>
                     <span class="text-danger text-nowrap">2299元</span>
                 </div>
             </div>
-            <div class="row mb-2">
+            <div class="row mb-2 product-item">
                 <div class="col-5 pr-0 pl-2">
                     <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
                 </div>
@@ -221,7 +221,7 @@
                     <h5 class="mb-0">
                         小米6
                     </h5>
-                    <p class="productDesc m-0">
+                    <p class="product-desc m-0">
                         小米 6 变焦双摄，拍人更美 骁龙835 旗舰处理器， 最高可选 6GB 大内存 |  5.15" 护眼屏 | 四曲面陶瓷 / 玻璃
                     </p>
                     <span class="badge badge-pill badge-secondary">全网通版 4GB</span>
@@ -261,7 +261,7 @@
         });
 
 
-        $(".swiper-slide").click(function () {
+        $(".swiper-slide").on("click", function () {
             console.log('click event');
             $(".swiper-slide").removeClass("active");
             $(this).addClass("active");
@@ -289,6 +289,17 @@
             $(".menu-left li").removeClass("active");
             $(this).addClass("active");
         })
+
+        var nDivHight = $(".page-container").height();
+        $(".page-container").scroll(function () {
+            var nScrollHight = $(this)[0].scrollHeight;
+            var nScrollTop = $(this)[0].scrollTop;
+            if (nScrollTop + nDivHight >= nScrollHight) {
+                console.log("哦哦,到底了,加载数据!");
+                $(".product-container").append($(".product-item:last-child").clone());
+                console.log("total item " + $(".product-item").length)
+            }
+        });
 
 
     });
