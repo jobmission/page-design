@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/4.1.6/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
     <meta charset="UTF-8">
     <style>
 
@@ -19,8 +20,8 @@
 
         .page-container {
             /*margin-top: 91px;*/
-            min-height: 360px;
-            max-height: 480px;
+            min-height: 380px;
+            max-height: 500px;
             overflow: auto;
         }
 
@@ -120,7 +121,6 @@
         </div>
     </div>
 </div>
-
 <div class="page-container container">
     <div class="row">
         <div class="col-4 col-sm-2 mt-2 pl-0">
@@ -133,7 +133,7 @@
             </ul>
         </div>
         <div class="col-8 col-sm-10 mt-2 pl-0 product-container">
-            <div class="row mb-2 product-item">
+            <div class="row mb-2 product-item" data-id="1">
                 <div class="col-5 pr-0  pl-2">
                     <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
                 </div>
@@ -149,26 +149,19 @@
                     <div class="input-group input-group-sm">
                         <div class="input-group-prepend">
                             <span class="input-group-text text-success quantity-minus">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
+                                <i class="fa fa-minus-circle"></i>
                             </span>
                         </div>
                         <input type="number" min="0" value="1" class="form-control quantity" aria-label="Amount (to the nearest dollar)"/>
                         <div class="input-group-append">
                             <span class="input-group-text text-success quantity-plus">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                                </svg>
+                                <i class="fa fa-plus-circle"></i>
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mb-2 product-item">
+            <div class="row mb-2 product-item" data-id="2">
                 <div class="col-5 pr-0 pl-2">
                     <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
                 </div>
@@ -183,7 +176,7 @@
                     <span class="text-danger text-nowrap">2299元</span>
                 </div>
             </div>
-            <div class="row mb-2 product-item">
+            <div class="row mb-2 product-item" data-id="3">
                 <div class="col-5 pr-0 pl-2">
                     <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
                 </div>
@@ -198,7 +191,7 @@
                     <span class="text-danger text-nowrap">2299元</span>
                 </div>
             </div>
-            <div class="row mb-2 product-item">
+            <div class="row mb-2 product-item" data-id="4">
                 <div class="col-5 pr-0 pl-2">
                     <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
                 </div>
@@ -213,7 +206,7 @@
                     <span class="text-danger text-nowrap">2299元</span>
                 </div>
             </div>
-            <div class="row mb-2 product-item">
+            <div class="row mb-2 product-item" data-id="5">
                 <div class="col-5 pr-0 pl-2">
                     <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
                 </div>
@@ -232,14 +225,78 @@
     </div>
 
 </div>
+<div class="foot-container container fixed-bottom bg-white">
+    <div class="row pt-2 pb-2">
+        <div class="col-4 text-center">
+            <span class="shopping-product" data-toggle="modal" data-target="#exampleModalCenter">
+                    <i class="fa fa-cart-plus"></i>
+            </span>
+        </div>
+        <div class="col-4 text-center">
+            <span class="shopping-cart">
+                    <i class="fa fa-shopping-cart"></i>
+            </span>
+        </div>
+        <div class="col-4 text-center">
+            <a href="orders-1.html">
+                <span class="user-center">
+                    <i class="fa fa-user"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade cart-container" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="top: auto;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                已选商品()<span class="text-secondary float-right clear-cart"><i class="far fa-trash-alt"></i>&nbsp;清空</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row cart-item cart-item-template d-none">
+                    <div class="col-5 pl-0 pr-0">
+                        <p class="mb-0 item-name">product name</p>
+                    </div>
 
-
+                    <div class="col-3 pl-0 pr-0">
+                        <p class="mb-0 item-unit-price">unit price</p>
+                        <p class="mb-0 item-promotion-price text-secondary">
+                            <del>promotion price</del>
+                        </p>
+                    </div>
+                    <div class="col-4 pl-0 pr-0">
+                        <div class="input-group input-group-sm">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text text-success bg-white border-0 p-1 quantity-minus">
+                                <i class="fa fa-minus-circle"></i>
+                            </span>
+                            </div>
+                            <input type="number" min="0" class="form-control border-0 quantity" aria-label="Amount (to the nearest dollar)"/>
+                            <div class="input-group-append">
+                            <span class="input-group-text text-success bg-white border-0 p-1 quantity-plus">
+                                <i class="fa fa-plus-circle"></i>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <p class="mb-0 text-right">共<span class="total-count">1</span>件商品 合计:$<span class="total-amount">99</span> (含运费$<span class="shipping-fee">0.00</span>)</p>
+                <button class="btn btn-outline-danger delete-order">去结算</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/Swiper/4.1.6/js/swiper.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+<script src="https://cdn.bootcss.com/localforage/1.5.7/localforage.min.js"></script>
 <script>
-
     $(document).ready(function () {
 
         var mySwiper = new Swiper('.swiper-container', {
@@ -254,7 +311,7 @@
                     } else {
                         console.log('你tap了Swiper,but mySwiper.clickedSlide is null!');
                     }
-                },
+                }
 
             }
 
@@ -271,24 +328,76 @@
                 console.log('你click了Swiper,but mySwiper.clickedSlide is null!');
             }
 
-        })
+        });
 
-        $(".quantity-minus").on("click", function () {
+        $("body").on("click", ".quantity-minus", function () {
             var currentQuantity = Number($(this).parent().parent().find("input.quantity").val());
             if (currentQuantity > 0) {
                 $(this).parent().parent().find("input.quantity").val(currentQuantity - 1);
             }
         });
 
-        $(".quantity-plus").on("click", function () {
+        $("body").on("click", ".quantity-plus", function () {
+            var productId = $(this).parents(".product-item").data("id");
             var currentQuantity = Number($(this).parent().parent().find("input.quantity").val());
-            $(this).parent().parent().find("input.quantity").val(currentQuantity + 1);
-        })
+            currentQuantity = currentQuantity + 1;
+            $(this).parent().parent().find("input.quantity").val(currentQuantity);
+
+            localforage.setItem('somekey', 'some value').then(function (value) {
+                // Do other things once the value has been saved.
+                console.log(value);
+            }).catch(function (err) {
+                // This code runs if there were any errors
+                console.log(err);
+            });
+
+            var flag = false;
+            $(".cart-item").each(function (index) {
+                var $existItem = $(this);
+                var cartItemId = $existItem.data("id");
+                if (cartItemId == productId) {
+                    flag = true;
+                    $existItem.find("input.quantity").val(currentQuantity);
+                    return false;
+                }
+            });
+            if (!flag) {
+                $(".cart-container .modal-body").append($(".cart-container .cart-item-template").clone().removeClass("d-none cart-item-template"));
+                $(".cart-item:last-child input.quantity").val(currentQuantity);
+                $(".cart-item:last-child").data("id", productId);
+            }
+
+        });
+
+        $(".shopping-cart").on("click", function () {
+            //页面层
+            $(".cart-container").removeClass("d-none").addClass("fixed-bottom");
+            localforage.getItem('somekey').then(function (value) {
+                // This code runs once the value has been loaded
+                // from the offline store.
+                console.log(value);
+            }).catch(function (err) {
+                // This code runs if there were any errors
+                console.log(err);
+            });
+        });
 
         $(".menu-left li").on("click", function () {
             $(".menu-left li").removeClass("active");
             $(this).addClass("active");
-        })
+        });
+
+        $("body").on("click", ".clear-cart", function () {
+            console.log("clear-cart");
+            $(".cart-container .modal-body").html("");
+            localforage.clear().then(function () {
+                // Run this code once the database has been entirely deleted.
+                console.log('Database is now empty.');
+            }).catch(function (err) {
+                // This code runs if there were any errors
+                console.log(err);
+            });
+        });
 
         var nDivHight = $(".page-container").height();
         $(".page-container").scroll(function () {
