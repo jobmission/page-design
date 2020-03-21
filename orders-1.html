@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.12.1/css/all.css">
     <meta charset="UTF-8">
     <title>
         My orders
@@ -12,87 +13,91 @@
 
     </style>
 </head>
+
 <body>
-<div class="container order-container mt-3">
-    <div class="card mb-3 order-item">
-        <div class="card-header pl-1 text-left">
-            订单号:1234567890<i class="fa fa-ellipsis-v chevron-right ml-3"></i><span class="float-right text-success">交易成功</span>
-        </div>
-        <div class="card-body text-center pt-1 pb-1">
-            <div class="row">
-                <div class="col-3 pl-0 pr-0">
-                    <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
-                </div>
-
-                <div class="col-6 pl-1 pr-0">
-                    <p class="mb-0">小米6 变焦双摄</p>
-                    <p class="mb-0">全网通版 4GB+64GB</p>
-                </div>
-
-                <div class="col-3 pl-1 pr-0">
-                    <p class="mb-0">$99</p>
-                    <p class="mb-0 text-secondary">
-                        <del>$99</del>
-                    </p>
-                </div>
+    <div class="container order-container mt-3">
+        <div class="card mb-3 order-item">
+            <div class="card-header pl-1 text-left">
+                订单号:1234567890<i class="fa fa-ellipsis-v chevron-right ml-3"></i><span
+                    class="float-right text-success">交易成功</span>
             </div>
-            <p class="mb-0 text-right">共1件商品 合计:$99 (含运费$0.00)</p>
+            <div class="card-body text-center pt-1 pb-1">
+                <div class="row">
+                    <div class="col-3 pl-0 pr-0">
+                        <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
+                    </div>
+
+                    <div class="col-6 pl-1 pr-0">
+                        <p class="mb-0">小米6 变焦双摄</p>
+                        <p class="mb-0">全网通版 4GB+64GB</p>
+                    </div>
+
+                    <div class="col-3 pl-1 pr-0">
+                        <p class="mb-0">$99</p>
+                        <p class="mb-0 text-secondary">
+                            <del>$99</del>
+                        </p>
+                    </div>
+                </div>
+                <p class="mb-0 text-right">共1件商品 合计:$99 (含运费$0.00)</p>
+            </div>
+            <div class="card-footer text-right">
+                <button class="btn btn-outline-danger delete-order"><i class="far fa-trash-alt"></i>删除订单</button>
+                <button class="btn btn-outline-secondary">申请开票</button>
+            </div>
         </div>
-        <div class="card-footer text-right">
-            <button class="btn btn-outline-danger delete-order"><i class="far fa-trash-alt"></i>删除订单</button>
-            <button class="btn btn-outline-secondary">申请开票</button>
+        <div class="card mb-3 order-item">
+            <div class="card-header pl-1 text-left">
+                订单号:1234567890<i class="fa fa-ellipsis-v chevron-right ml-3"></i><span
+                    class="float-right text-success">交易成功</span>
+            </div>
+            <div class="card-body text-center pt-1 pb-1">
+                <div class="row">
+                    <div class="col-3 pl-0 pr-0">
+                        <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
+                    </div>
+
+                    <div class="col-6 pl-1 pr-0">
+                        <p class="mb-0">小米6 变焦双摄</p>
+                        <p class="mb-0">全网通版 4GB+64GB</p>
+                    </div>
+
+                    <div class="col-3 pl-1 pr-0">
+                        <p class="mb-0">$99</p>
+                        <p class="mb-0 text-secondary">
+                            <del>$99</del>
+                        </p>
+                    </div>
+                </div>
+                <p class="mb-0 text-right">共1件商品 合计:$99 (含运费$0.00)</p>
+            </div>
+            <div class="card-footer text-right">
+                <button class="btn btn-outline-danger delete-order"><i class="far fa-trash-alt"></i>删除订单</button>
+                <button class="btn btn-outline-secondary">申请开票</button>
+            </div>
         </div>
     </div>
-    <div class="card mb-3 order-item">
-        <div class="card-header pl-1 text-left">
-            订单号:1234567890<i class="fa fa-ellipsis-v chevron-right ml-3"></i><span class="float-right text-success">交易成功</span>
-        </div>
-        <div class="card-body text-center pt-1 pb-1">
-            <div class="row">
-                <div class="col-3 pl-0 pr-0">
-                    <img src="http://placehold.it/400&text=placehold" class="img-fluid" alt="Responsive image">
-                </div>
 
-                <div class="col-6 pl-1 pr-0">
-                    <p class="mb-0">小米6 变焦双摄</p>
-                    <p class="mb-0">全网通版 4GB+64GB</p>
-                </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-                <div class="col-3 pl-1 pr-0">
-                    <p class="mb-0">$99</p>
-                    <p class="mb-0 text-secondary">
-                        <del>$99</del>
-                    </p>
-                </div>
-            </div>
-            <p class="mb-0 text-right">共1件商品 合计:$99 (含运费$0.00)</p>
-        </div>
-        <div class="card-footer text-right">
-            <button class="btn btn-outline-danger delete-order"><i class="far fa-trash-alt"></i>删除订单</button>
-            <button class="btn btn-outline-secondary">申请开票</button>
-        </div>
-    </div>
-</div>
+    <script>
 
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        $(document).ready(function () {
 
-<script>
+            $(".delete-order").on("click", function () {
+                console.log("delete order!");
+            });
 
-    $(document).ready(function () {
-
-        $(".delete-order").on("click", function () {
-            console.log("delete order!");
+            $(window).scroll(function () {
+                if ($(document).scrollTop() + $(window).height() >= $(document).height()) {
+                    console.log("哦哦,到底了,加载数据!");
+                    $(".order-container").append($(".order-item:first-child").clone());
+                    console.log("total item " + $(".order-item").length)
+                }
+            });
         });
-
-        $(window).scroll(function () {
-            if ($(document).scrollTop() + $(window).height() >= $(document).height()) {
-                console.log("哦哦,到底了,加载数据!");
-                $(".order-container").append($(".order-item:first-child").clone());
-                console.log("total item " + $(".order-item").length)
-            }
-        });
-    });
-</script>
+    </script>
 </body>
+
 </html>
